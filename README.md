@@ -1,22 +1,54 @@
-# {REPO-NAME}
+# Cirreum.Runtime.Storage
 
-[![NuGet Version](https://img.shields.io/nuget/v/{REPO-NAME}.svg?style=flat-square&labelColor=1F1F1F&color=003D8F)](https://www.nuget.org/packages/{REPO-NAME}/)
-[![NuGet Downloads](https://img.shields.io/nuget/dt/{REPO-NAME}.svg?style=flat-square&labelColor=1F1F1F&color=003D8F)](https://www.nuget.org/packages/{REPO-NAME}/)
-[![GitHub Release](https://img.shields.io/github/v/release/cirreum/{REPO-NAME}?style=flat-square&labelColor=1F1F1F&color=FF3B2E)](https://github.com/cirreum/{REPO-NAME}/releases)
-[![License](https://img.shields.io/github/license/cirreum/{REPO-NAME}?style=flat-square&labelColor=1F1F1F&color=F2F2F2)](https://github.com/cirreum/{REPO-NAME}/blob/main/LICENSE)
+[![NuGet Version](https://img.shields.io/nuget/v/Cirreum.Runtime.Storage.svg?style=flat-square&labelColor=1F1F1F&color=003D8F)](https://www.nuget.org/packages/Cirreum.Runtime.Storage/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Cirreum.Runtime.Storage.svg?style=flat-square&labelColor=1F1F1F&color=003D8F)](https://www.nuget.org/packages/Cirreum.Runtime.Storage/)
+[![GitHub Release](https://img.shields.io/github/v/release/cirreum/Cirreum.Runtime.Storage?style=flat-square&labelColor=1F1F1F&color=FF3B2E)](https://github.com/cirreum/Cirreum.Runtime.Storage/releases)
+[![License](https://img.shields.io/github/license/cirreum/Cirreum.Runtime.Storage?style=flat-square&labelColor=1F1F1F&color=F2F2F2)](https://github.com/cirreum/Cirreum.Runtime.Storage/blob/main/LICENSE)
 [![.NET](https://img.shields.io/badge/.NET-10.0-003D8F?style=flat-square&labelColor=1F1F1F)](https://dotnet.microsoft.com/)
 
-**{TAG LINE}**
+**Storage service configuration for Cirreum runtime applications**
 
 ## Overview
 
-**{REPO-NAME}** {REPO-DESCRIPTION}.
+**Cirreum.Runtime.Storage** provides runtime configuration and integration for storage services within the Cirreum Foundation Framework.
 
-{READ-ME-CONTENT}
+This extension simplifies the setup of storage providers (such as Azure Blob Storage) by offering hosting extensions that automatically configure service providers, health checks, and dependency injection for your runtime applications.
 
-## Documentation
+## Features
 
-{ANY OTHER DOCS - OTHERWISE REMOVE}
+- **Azure Blob Storage Integration** - Pre-configured support for Azure Blob Storage
+- **Service Provider Pattern** - Consistent configuration pattern across all storage providers
+- **Health Check Integration** - Automatic health check registration for storage services
+- **Duplicate Registration Prevention** - Built-in safeguards against duplicate service registrations
+- **Runtime Configuration** - Dynamic configuration through the Cirreum service provider infrastructure
+
+## Getting Started
+
+### Installation
+
+```bash
+dotnet add package Cirreum.Runtime.Storage
+```
+
+### Usage
+
+Add storage services to your host application builder:
+
+```csharp
+using Microsoft.AspNetCore.Hosting;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add storage configuration
+builder.AddStorage();
+
+var app = builder.Build();
+```
+
+This will automatically:
+- Configure Azure Blob Storage providers based on your application settings
+- Register health checks for storage services
+- Set up dependency injection for storage-related services
 
 ## Contribution Guidelines
 
@@ -40,7 +72,7 @@
 
 ## Versioning
 
-{REPO-NAME} follows [Semantic Versioning](https://semver.org/):
+Cirreum.Runtime.Storage follows [Semantic Versioning](https://semver.org/):
 
 - **Major** - Breaking API changes
 - **Minor** - New features, backward compatible
