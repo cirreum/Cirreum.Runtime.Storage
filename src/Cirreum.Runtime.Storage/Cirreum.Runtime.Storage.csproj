@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>The Runtime Storage service configuration.</Description>
+		<PackageTags>cirreum;runtime;server;serviceprovider;storage</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Cirreum.Storage.Azure" Version="1.0.0" />
+		<PackageReference Include="Cirreum.Runtime.ServiceProvider" Version="1.0.0" />
+	</ItemGroup>
+
+</Project>
