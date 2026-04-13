@@ -6,7 +6,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Cirreum.Storage.Azure" Version="1.0.12" />
+		<PackageReference Include="Cirreum.Storage.Azure" Version="1.0.14" />
 		<PackageReference Include="Cirreum.Runtime.ServiceProvider" Version="1.0.10" />
 	</ItemGroup>
 
